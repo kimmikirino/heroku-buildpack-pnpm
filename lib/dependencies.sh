@@ -145,8 +145,11 @@ pnpm_node_modules() {
   local production=${PNPM_PRODUCTION:-false}
 
   echo "Installing node modules (pnpm-lock.yaml)"
+  echo "Installing node modules (pnpm-lock.yaml)"
+  echo "$build_dir"
   cd "$build_dir" || return
-  monitor "pnpm-install" pnpm install -D && pnpm install
+  monitor "pnpm-install" pnpm install
+  monitor "pnpm-install" pnpm install -D
 }
 
 yarn_2_install() {
