@@ -149,7 +149,6 @@ pnpm_node_modules() {
   echo "$build_dir"
   cd "$build_dir" || return
   monitor "pnpm-install" pnpm install
-  monitor "pnpm-install" pnpm install -D
 }
 
 yarn_2_install() {
