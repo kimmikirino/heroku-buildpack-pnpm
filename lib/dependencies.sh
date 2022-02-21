@@ -146,7 +146,7 @@ pnpm_node_modules() {
 
   echo "Installing node modules (pnpm-lock.yaml)"
   cd "$build_dir" || return
-  monitor "pnpm-install" pnpm install -D
+  monitor "pnpm-install" pnpm install -D && pnpm install
 }
 
 yarn_2_install() {
