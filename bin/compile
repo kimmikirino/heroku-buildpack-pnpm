@@ -386,7 +386,7 @@ elif $PNPM; then
   cache_build | output "$LOG_FILE"
   meta_set "build-step" "prune-dependencies"
   header "Pruning devDependencies" | output "$LOG_FILE"
-  prune_devdependencies | output "$LOG_FILE"
+  # prune_devdependencies | output "$LOG_FILE"
 else
   meta_set "build-step" "save-cache"
   cache_build | output "$LOG_FILE"
